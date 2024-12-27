@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <a href="/admin/add-course">Add Course</a>
+    </header>
+    <main>
+        {% for course_id, course_name in courses.items() %}
+        <section>
+            <h2>{{ course_name }}</h2>
+            <a href="/admin/add-plan/{{ course_id }}">Add Plan</a>
+        </section>
+        {% endfor %}
+    </main>
+</body>
+</html>
 
