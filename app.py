@@ -55,3 +55,7 @@ async def save_plan(course_id: str, name: str = Form(...), pdf: UploadFile = Fil
     # Save plan in database
     redis.hset(f"course:{course_id}:plans", name, file_path)
     return RedirectResponse("/admin", status_code=303)
+    
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
