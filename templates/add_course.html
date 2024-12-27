@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Add Course</h1>
+    </header>
+    <main>
+        <form action="/admin/add-course" method="post">
+            <label for="title">Course Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter course title" required>
+            <button type="submit">Add Course</button>
+        </form>
+    </main>
+</body>
+</html>
 
