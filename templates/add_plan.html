@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plan</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Add Plan for {{ course_name }}</h1>
+    </header>
+    <main>
+        <form action="/admin/add-plan/{{ course_id }}" method="post" enctype="multipart/form-data">
+            <label for="name">Plan Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="pdf">Upload PDF:</label>
+            <input type="file" id="pdf" name="pdf" required>
+            <button type="submit">Add Plan</button>
+        </form>
+    </main>
+</body>
+</html>
 
