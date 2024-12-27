@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission CS Test Series</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Mission CS Test Series</h1>
+    </header>
+    <main>
+        {% for course_id, course in course_data.items() %}
+        <section>
+            <h2>{{ course.name }}</h2>
+            <div>
+                {% for plan_name, pdf_path in course.plans.items() %}
+                <div>
+                    <h3>{{ plan_name }}</h3>
+                    <a href="{{ pdf_path }}" target="_blank">Download PDF</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+    </main>
+</body>
+</html>
 
